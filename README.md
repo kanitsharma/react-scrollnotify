@@ -18,4 +18,6 @@ import Notify from 'react-scrollnotify';
 
  => onvisible
 
-[Demo](https://kanitsharma.github.io/react-scrollnotify/)
+## This project is still under production. Feel free to report the issues in github.
+
+## Demo coming soon..

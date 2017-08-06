@@ -72,11 +72,11 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/rajatsharma305/gradient-buttons.git"
+    "url": "https://github.com/kanitsharma/react-scrollnotify.git"
   },
-  "homepage": "https://rajatsharma305.github.io/gradient-buttons/",
+  "homepage": "https://kanitsharma.github.io/react-scrollnotify/",
   "bugs": {
-    "url": "https://github.com/rajatsharma305/gradient-buttons/issues"
+    "url": "https://github.com/kanitsharma/react-scrollnotify/issues"
   },
   "jest": {
     "collectCoverage": true,

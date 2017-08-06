@@ -1,46 +1,33 @@
 /* eslint-disable global-require, import/no-unresolved, react/no-multi-comp */
+import 'purecss/build/pure.css';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import GithubCorner from 'react-github-corner';
-import { Catalog, CodeSpecimen, ReactSpecimen } from 'catalog';
+import Notify from '../src/notify';
 
-import 'purecss/build/pure.css';
 import './main.css';
 // import '../style.css';
 
 // Add your documentation imports here. These are available to
 // React specimen. Do NOT pass React here as Catalog does that.
-const documentationImports = {};
-const title = 'React Scroll Notify'; // eslint-disable-line no-undef
-const project = 'react-scrollnotify'; // eslint-disable-line no-undef
-const pages = [{
-  imports: { GradientButton: require('../src/index').GradientButton },
-  path: '/',
-  title: 'Themes',
-  component: require('./demo.md')
-}];
 
 // Catalog - logoSrc="../images/logo.png"
 ReactDOM.render(
   <div>
     <GithubCorner
-      href={`https://github.com/${project}`}
+      href={'https://github.com/kanitsharma'}
       bannerColor="#fff"
       octoColor="#000"
       width={80}
       height={80}
       direction="right"
+      className="bottom"
     />
-    <Catalog
-      imports={documentationImports}
-      pages={pages}
-      specimens={{
-        javascript: props => <CodeSpecimen {...props} lang="javascript" />,
-        js: props => <CodeSpecimen {...props} lang="javascript" />,
-        jsx: props => <ReactSpecimen {...props} />
-      }}
-      title={title}
-    />
+    <Notify onvisible={() => alert('Function is fired')} className="bottom">
+      <h1>
+        If you see me function is fired
+      </h1>
+    </Notify>
   </div>,
   document.getElementById('app')
 );
