@@ -15,7 +15,7 @@ import './main.css';
 ReactDOM.render(
   <div>
     <GithubCorner
-      href={'https://github.com/kanitsharma'}
+      href={'https://github.com/kanitsharma/react-scrollnotify'}
       bannerColor="#fff"
       octoColor="#000"
       width={80}
@@ -23,11 +23,13 @@ ReactDOM.render(
       direction="right"
       className="bottom"
     />
-    <Notify onvisible={() => alert('Function is fired')} className="bottom">
-      <h1>
-        If you see me function is fired
-      </h1>
-    </Notify>
+    <div className="bottom">
+      <Notify onvisible={() => alert('Function is fired')}>
+        <h1>
+          If you see me function is fired
+        </h1>
+      </Notify>
+    </div>
   </div>,
   document.getElementById('app')
 );

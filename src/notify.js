@@ -14,7 +14,7 @@ class Notify extends Component {
       this.state.visible = true;
       this.props.onvisible();
     }
-    Window.onscroll = () => {
+    window.onscroll = () => {
       if (!this.check() && this.state.visible === false) {
         this.setState({ visible: true });
         this.props.onvisible();
@@ -26,8 +26,8 @@ class Notify extends Component {
   check() {
     const rect = this.element.getBoundingClientRect();
     return (
-      rect.bottom < 0 || rect.right < 0 || rect.left > Window.innerWidth ||
-      rect.top > Window.innerHeight
+      rect.bottom < 0 || rect.right < 0 || rect.left > window.innerWidth ||
+      rect.top > window.innerHeight
     );
   }
   render() {
