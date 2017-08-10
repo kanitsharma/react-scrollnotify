@@ -23,6 +23,9 @@ ReactDOM.render(
       direction="right"
       className="bottom"
     />
+    <div className="heading">
+      Scroll Down
+    </div>
     <div className="bottom">
       <Notify onvisible={() => alert('Function is fired')}>
         <h1>
