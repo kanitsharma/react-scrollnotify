@@ -27,9 +27,16 @@ ReactDOM.render(
       Scroll Down
     </div>
     <div className="bottom">
-      <Notify onvisible={() => alert('Function is fired')}>
-        <h1>
+      <Notify onvisible={() => console.log('fired')} animation="animate">
+        <h1 style={{ marginBottom: '250px', fontSize: '70px' }}>
           If you see me function is fired
+        </h1>
+      </Notify>
+    </div>
+    <div className="bottom">
+      <Notify animation="left">
+        <h1 style={{ marginBottom: '250px', fontSize: '70px' }}>
+          Checkout the console
         </h1>
       </Notify>
     </div>

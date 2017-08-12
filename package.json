@@ -3,7 +3,7 @@
   "description": "Viewport notifier for react",
   "author": "Kanit Sharma",
   "user": "kanitsharma",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "scripts": {
     "start": "webpack-dev-server --env dev",
     "test": "jest",

@@ -13,15 +13,21 @@ class Notify extends Component {
     if (!this.check()) {
       this.state.visible = true;
       this.props.onvisible();
+      this.element.classList.add(this.props.animation);
     }
-    window.onscroll = () => {
+    window.addEventListener('scroll', () => {
       if (!this.check() && this.state.visible === false) {
         this.setState({ visible: true });
         this.props.onvisible();
+        this.element.classList.add(this.props.animation);
       } else if (this.check() && this.state.visible === true) {
         this.setState({ visible: false });
+        this.element.classList.remove(this.props.animation);
       }
-    };
+    });
+  }
+  componentWillUnmount() {
+    window.removeEventListener('scroll');
   }
   check() {
     const rect = this.element.getBoundingClientRect();
@@ -39,9 +45,15 @@ class Notify extends Component {
   }
 }
 
+Notify.defaultProps = {
+  animation: '',
+  onvisible: () => {}
+};
+
 Notify.propTypes = {
-  onvisible: PropTypes.func.isRequired,
-  children: PropTypes.element.isRequired
+  onvisible: PropTypes.func,
+  children: PropTypes.element.isRequired,
+  animation: PropTypes.string
 };
 
 export default Notify;

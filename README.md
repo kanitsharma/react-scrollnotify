@@ -1,6 +1,8 @@
 # React Scroll Notify
 
-A react wrapper that detects when your component enters the viewport and fires a function passed as prop
+A react wrapper that detects when your component enters the viewport, fires a function passed as prop and add animations to it!
+
+### Now you animate components by passing your animation class or animate.css classes as prop
 
 ## Installation
 
@@ -21,14 +23,15 @@ import { Notify } from 'react-scrollnotify';
 .
 .
 .
-<Notify onvisible={yourFunction()}>
+<Notify onvisible={yourFunction()} animation='youranimationclass'>
   ...
 </Notify>
 ```
 
 ## Props
 
- => onvisible
+ ### onvisible
+ ### animation
 
 ## Feel free to report the issues in github.
 ## Leave me a star if you think it’s cool!
